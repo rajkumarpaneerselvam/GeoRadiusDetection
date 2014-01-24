@@ -7,6 +7,8 @@
 //
 
 #import "GPSViewController.h"
+#import "GeoRadiusDataModel.h"
+#import "GPSCoredataManager.h"
 
 
 @interface GPSViewController ()
@@ -18,6 +20,8 @@
 @synthesize plistUtility = _plistUtility;
 @synthesize geoLocationArray = _geoLocationArray;
 @synthesize locationManager = _locationManager;
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize fetchedResultsController = _fetchedResultsController;
 
 - (void)viewDidLoad
 {
@@ -30,6 +34,12 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy=kCLLocationAccuracyBest;
     self.locationManager.distanceFilter=kCLDistanceFilterNone;
+    
+    GPSCoredataManager *mgr = [[GPSCoredataManager alloc] init];
+//    [mgr managedObjectContext];
+    [mgr insertContentIntoCoreData];
+    [mgr readContentFromCoreData];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,4 +79,8 @@
     [self.locationManager setDelegate:self];
     [self.locationManager startUpdatingLocation];
 }
+
+
+
+
 @end

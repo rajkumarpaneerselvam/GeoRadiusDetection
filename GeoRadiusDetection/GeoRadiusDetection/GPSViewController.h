@@ -30,6 +30,10 @@
 @property (strong, nonatomic) NSMutableArray *geoLocationArray;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+
+
 
 - (IBAction)locatemeAction:(id)sender;
 

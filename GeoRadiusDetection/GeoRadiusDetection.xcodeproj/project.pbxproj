@@ -25,6 +25,10 @@
 		A3A7743B1892F23400F21E87 /* GPSUtilitiesPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A7743A1892F23400F21E87 /* GPSUtilitiesPlist.m */; };
 		A3A7743D1892F9D500F21E87 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A7743C1892F9D500F21E87 /* CoreLocation.framework */; };
 		A3AEADBC1893019A0001AACC /* columbus.png in Resources */ = {isa = PBXBuildFile; fileRef = A3AEADBB1893019A0001AACC /* columbus.png */; };
+		EA7FADEF189309DE00127B81 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7FADEE189309DE00127B81 /* CoreData.framework */; };
+		EA7FADF218930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA7FADF018930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodeld */; };
+		EA7FADF51893172800127B81 /* GeoRadiusDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7FADF41893172800127B81 /* GeoRadiusDataModel.m */; };
+		EA7FADF818931BE900127B81 /* GPSCoredataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7FADF718931BE900127B81 /* GPSCoredataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,12 @@
 		A3A7743A1892F23400F21E87 /* GPSUtilitiesPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSUtilitiesPlist.m; path = "Plist-Mode/GPSUtilitiesPlist.m"; sourceTree = "<group>"; };
 		A3A7743C1892F9D500F21E87 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A3AEADBB1893019A0001AACC /* columbus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = columbus.png; sourceTree = "<group>"; };
+		EA7FADEE189309DE00127B81 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EA7FADF118930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoRadiusDetectionDataModel.xcdatamodel; sourceTree = "<group>"; };
+		EA7FADF31893172800127B81 /* GeoRadiusDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoRadiusDataModel.h; path = GeoRadiusDetection/CoreDataImplementation/GeoRadiusDataModel.h; sourceTree = "<group>"; };
+		EA7FADF41893172800127B81 /* GeoRadiusDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoRadiusDataModel.m; path = GeoRadiusDetection/CoreDataImplementation/GeoRadiusDataModel.m; sourceTree = "<group>"; };
+		EA7FADF618931BE900127B81 /* GPSCoredataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSCoredataManager.h; path = GeoRadiusDetection/CoreDataImplementation/GPSCoredataManager.h; sourceTree = "<group>"; };
+		EA7FADF718931BE900127B81 /* GPSCoredataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSCoredataManager.m; path = GeoRadiusDetection/CoreDataImplementation/GPSCoredataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7FADEF189309DE00127B81 /* CoreData.framework in Frameworks */,
 				A3A7743D1892F9D500F21E87 /* CoreLocation.framework in Frameworks */,
 				4DA85CDE1891C3FD007E64D0 /* CoreGraphics.framework in Frameworks */,
 				4DA85CE01891C3FD007E64D0 /* UIKit.framework in Frameworks */,
@@ -92,6 +103,7 @@
 		4DA85CCF1891C3FD007E64D0 = {
 			isa = PBXGroup;
 			children = (
+				EA7FADED189309AE00127B81 /* CoreDataImplementation */,
 				4DA85CE11891C3FD007E64D0 /* GeoRadiusDetection */,
 				4DA85D001891C3FD007E64D0 /* GeoRadiusDetectionTests */,
 				4DA85CDA1891C3FD007E64D0 /* Frameworks */,
@@ -111,6 +123,7 @@
 		4DA85CDA1891C3FD007E64D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA7FADEE189309DE00127B81 /* CoreData.framework */,
 				A3A7743C1892F9D500F21E87 /* CoreLocation.framework */,
 				4DA85CDB1891C3FD007E64D0 /* Foundation.framework */,
 				4DA85CDD1891C3FD007E64D0 /* CoreGraphics.framework */,
@@ -181,6 +194,18 @@
 				A3AEADBB1893019A0001AACC /* columbus.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		EA7FADED189309AE00127B81 /* CoreDataImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				EA7FADF018930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodeld */,
+				EA7FADF31893172800127B81 /* GeoRadiusDataModel.h */,
+				EA7FADF41893172800127B81 /* GeoRadiusDataModel.m */,
+				EA7FADF618931BE900127B81 /* GPSCoredataManager.h */,
+				EA7FADF718931BE900127B81 /* GPSCoredataManager.m */,
+			);
+			name = CoreDataImplementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3A7743B1892F23400F21E87 /* GPSUtilitiesPlist.m in Sources */,
+				EA7FADF51893172800127B81 /* GeoRadiusDataModel.m in Sources */,
 				4DA85CF21891C3FD007E64D0 /* GPSViewController.m in Sources */,
+				EA7FADF218930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodeld in Sources */,
 				4DA85CE81891C3FD007E64D0 /* main.m in Sources */,
+				EA7FADF818931BE900127B81 /* GPSCoredataManager.m in Sources */,
 				4DA85CEC1891C3FD007E64D0 /* GPSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +535,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA7FADF018930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA7FADF118930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodel */,
+			);
+			currentVersion = EA7FADF118930A4500127B81 /* GeoRadiusDetectionDataModel.xcdatamodel */;
+			name = GeoRadiusDetectionDataModel.xcdatamodeld;
+			path = GeoRadiusDetection/CoreDataImplementation/GeoRadiusDetectionDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4DA85CD01891C3FD007E64D0 /* Project object */;
 }

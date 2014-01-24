@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6782B426-BF3B-4D14-B0E7-5C24A91ECD7D</string>
+	<string>B5D4449E-F40E-42B9-9C58-A75979E331E4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GeoRadiusDetection</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F63143F1-34CA-4CF6-A958-DE040626FC6E</key>
-		<string>https://github.com/rajkumarpaneerselvam/GeoRadiusDetection.git</string>
+		<key>6B8B3232-85A4-459B-87D9-6650B00D276F</key>
+		<string>https://github.com/rajkumarpaneerselvam/GeoRadiusDetection</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GeoRadiusDetection/GeoRadiusDetection.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F63143F1-34CA-4CF6-A958-DE040626FC6E</key>
+		<key>6B8B3232-85A4-459B-87D9-6650B00D276F</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/rajkumarpaneerselvam/GeoRadiusDetection.git</string>
+	<string>https://github.com/rajkumarpaneerselvam/GeoRadiusDetection</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F63143F1-34CA-4CF6-A958-DE040626FC6E</string>
+	<string>6B8B3232-85A4-459B-87D9-6650B00D276F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F63143F1-34CA-4CF6-A958-DE040626FC6E</string>
+			<string>6B8B3232-85A4-459B-87D9-6650B00D276F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>POC</string>
+			<string>GeoRadiusDetection</string>
 		</dict>
 	</array>
 </dict>
