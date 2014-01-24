@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GPSUtilitiesPlist.h"
 #import <CoreLocation/CoreLocation.h>
+#import "GPSSqliteHelper.h"
 
 
 @interface GPSViewController : UIViewController <CLLocationManagerDelegate> {
-    
+    GPSSqliteHelper *sqliteHelper;
 }
 
 @property (strong, nonatomic) GPSUtilitiesPlist *plistUtility;

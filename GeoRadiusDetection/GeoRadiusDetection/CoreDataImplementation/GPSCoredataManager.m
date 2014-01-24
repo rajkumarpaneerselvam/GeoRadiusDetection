@@ -67,24 +67,23 @@
 
 - (void)insertContentIntoCoreData {
     
-    
-    GPSUtilitiesPlist *utility = [[GPSUtilitiesPlist alloc] init];
-    NSMutableArray *dataArr = [utility getLocationData];
-    
-    NSManagedObjectContext *context = [self managedObjectContext];
-    GeoRadiusDataModel *dataObj = [NSEntityDescription   insertNewObjectForEntityForName:@"GeoRadiusDataModel" inManagedObjectContext:context];
-
-    dataObj.latitude = @"22.596996";
-    dataObj.longtitude = @"49.02883";
-    dataObj.image = @"dallas.png";
-    dataObj.title = @"Test Chase";
-    dataObj.radius = @"2.0";
-    
-    NSError *error;
-    if (![context save:&error]) {
-        NSLog(@"========Error in saving data in data model=============");
-    }
-    NSLog(@"========== Content inserted successfully =========");
+//    
+//    GPSUtilitiesPlist *utility = [[GPSUtilitiesPlist alloc] init];
+//    NSMutableArray *dataArr = [utility getLocationData];
+//    
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//    GeoRadiusDataModel *dataObj = [NSEntityDescription   insertNewObjectForEntityForName:@"GeoRadiusDataModel" inManagedObjectContext:context];
+//
+//    dataObj.latitude = @"22.596996";
+//    dataObj.longtitude = @"49.02883";
+//    dataObj.image = @"dallas.png";
+//    dataObj.title = @"Test Chase";
+//    dataObj.radius = @"2.0";
+//    
+//    NSError *error;
+//    if (![context save:&error]) {
+//        NSLog(@"========Error in saving data in data model=============");
+//    }
 }
 
 
