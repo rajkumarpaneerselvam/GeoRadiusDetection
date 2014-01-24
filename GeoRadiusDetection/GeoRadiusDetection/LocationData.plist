@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <array>
-        <dict>
-            <key>title</key>
-            <string>newyork</string>
-            <key>image</key>
-            <string>nj.png</string>
-            <key>lat</key>
-            <real>42.4</real>
-            <key>lon</key>
-            <real>73.45</real>
-            <key>radius</key>
-            <integer>10</integer>
-        </dict>
-    </array>
+<array>
+	<dict>
+		<key>title</key>
+		<string>Albany, N.M</string>
+		<key>image</key>
+		<string>nm.png</string>
+		<key>lat</key>
+		<real>42.4</real>
+		<key>lon</key>
+		<real>73.45</real>
+		<key>radius</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Amarillo, Tex.</string>
+		<key>image</key>
+		<string>amarillo.png</string>
+		<key>lat</key>
+		<real>35.11</real>
+		<key>lon</key>
+		<real>101.5</real>
+		<key>radius</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Dallas, Tex.</string>
+		<key>image</key>
+		<string>dallas.png</string>
+		<key>lat</key>
+		<real>32.46</real>
+		<key>lon</key>
+		<real>96.45999999999999</real>
+		<key>radius</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Chicago, Ill.</string>
+		<key>image</key>
+		<string>chicago.png</string>
+		<key>lat</key>
+		<real>41.5</real>
+		<key>lon</key>
+		<real>87.37</real>
+		<key>radius</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Columbus, Oh</string>
+		<key>image</key>
+		<string>columbus.png</string>
+		<key>lat</key>
+		<integer>40</integer>
+		<key>lon</key>
+		<real>83.09999999999999</real>
+		<key>radius</key>
+		<integer>10</integer>
+	</dict>
+</array>
 </plist>

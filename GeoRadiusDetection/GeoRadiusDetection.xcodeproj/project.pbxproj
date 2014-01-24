@@ -22,6 +22,9 @@
 		4DA85D051891C3FD007E64D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DA85D031891C3FD007E64D0 /* InfoPlist.strings */; };
 		4DA85D071891C3FD007E64D0 /* GeoRadiusDetectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA85D061891C3FD007E64D0 /* GeoRadiusDetectionTests.m */; };
 		A3A774371892EBC100F21E87 /* LocationData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3A774361892EBC100F21E87 /* LocationData.plist */; };
+		A3A7743B1892F23400F21E87 /* GPSUtilitiesPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A7743A1892F23400F21E87 /* GPSUtilitiesPlist.m */; };
+		A3A7743D1892F9D500F21E87 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A7743C1892F9D500F21E87 /* CoreLocation.framework */; };
+		A3AEADBC1893019A0001AACC /* columbus.png in Resources */ = {isa = PBXBuildFile; fileRef = A3AEADBB1893019A0001AACC /* columbus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,10 @@
 		4DA85D041891C3FD007E64D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4DA85D061891C3FD007E64D0 /* GeoRadiusDetectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoRadiusDetectionTests.m; sourceTree = "<group>"; };
 		A3A774361892EBC100F21E87 /* LocationData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocationData.plist; sourceTree = "<group>"; };
+		A3A774391892F23400F21E87 /* GPSUtilitiesPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSUtilitiesPlist.h; path = "Plist-Mode/GPSUtilitiesPlist.h"; sourceTree = "<group>"; };
+		A3A7743A1892F23400F21E87 /* GPSUtilitiesPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSUtilitiesPlist.m; path = "Plist-Mode/GPSUtilitiesPlist.m"; sourceTree = "<group>"; };
+		A3A7743C1892F9D500F21E87 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A3AEADBB1893019A0001AACC /* columbus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = columbus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A7743D1892F9D500F21E87 /* CoreLocation.framework in Frameworks */,
 				4DA85CDE1891C3FD007E64D0 /* CoreGraphics.framework in Frameworks */,
 				4DA85CE01891C3FD007E64D0 /* UIKit.framework in Frameworks */,
 				4DA85CDC1891C3FD007E64D0 /* Foundation.framework in Frameworks */,
@@ -103,6 +111,7 @@
 		4DA85CDA1891C3FD007E64D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3A7743C1892F9D500F21E87 /* CoreLocation.framework */,
 				4DA85CDB1891C3FD007E64D0 /* Foundation.framework */,
 				4DA85CDD1891C3FD007E64D0 /* CoreGraphics.framework */,
 				4DA85CDF1891C3FD007E64D0 /* UIKit.framework */,
@@ -119,6 +128,7 @@
 				4DA85CED1891C3FD007E64D0 /* Main.storyboard */,
 				4DA85CF01891C3FD007E64D0 /* GPSViewController.h */,
 				4DA85CF11891C3FD007E64D0 /* GPSViewController.m */,
+				A3A774381892F1EE00F21E87 /* Plist-Mode */,
 				4DA85CF31891C3FD007E64D0 /* Images.xcassets */,
 				4DA85CE21891C3FD007E64D0 /* Supporting Files */,
 			);
@@ -128,6 +138,7 @@
 		4DA85CE21891C3FD007E64D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3AEADBA1893019A0001AACC /* images */,
 				4DA85CE31891C3FD007E64D0 /* GeoRadiusDetection-Info.plist */,
 				A3A774361892EBC100F21E87 /* LocationData.plist */,
 				4DA85CE41891C3FD007E64D0 /* InfoPlist.strings */,
@@ -153,6 +164,23 @@
 				4DA85D031891C3FD007E64D0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3A774381892F1EE00F21E87 /* Plist-Mode */ = {
+			isa = PBXGroup;
+			children = (
+				A3A774391892F23400F21E87 /* GPSUtilitiesPlist.h */,
+				A3A7743A1892F23400F21E87 /* GPSUtilitiesPlist.m */,
+			);
+			name = "Plist-Mode";
+			sourceTree = "<group>";
+		};
+		A3AEADBA1893019A0001AACC /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A3AEADBB1893019A0001AACC /* columbus.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA85CF41891C3FD007E64D0 /* Images.xcassets in Resources */,
+				A3AEADBC1893019A0001AACC /* columbus.png in Resources */,
 				4DA85CE61891C3FD007E64D0 /* InfoPlist.strings in Resources */,
 				4DA85CEF1891C3FD007E64D0 /* Main.storyboard in Resources */,
 				A3A774371892EBC100F21E87 /* LocationData.plist in Resources */,
@@ -254,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A7743B1892F23400F21E87 /* GPSUtilitiesPlist.m in Sources */,
 				4DA85CF21891C3FD007E64D0 /* GPSViewController.m in Sources */,
 				4DA85CE81891C3FD007E64D0 /* main.m in Sources */,
 				4DA85CEC1891C3FD007E64D0 /* GPSAppDelegate.m in Sources */,

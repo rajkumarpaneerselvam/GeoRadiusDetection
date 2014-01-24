@@ -7,16 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPSUtilitiesPlist.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface GPSViewController : UIViewController
 
+@interface GPSViewController : UIViewController <CLLocationManagerDelegate> {
+    
+}
+
+@property (strong, nonatomic) GPSUtilitiesPlist *plistUtility;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet UITextField *txtLat;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtLon;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnSelector;
+@property (weak, nonatomic) IBOutlet UIButton *btnLocateMe;
+@property (weak, nonatomic) IBOutlet UIButton *btnLocate;
 
 
+
+@property (strong, nonatomic) NSMutableArray *geoLocationArray;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
+
+- (IBAction)locatemeAction:(id)sender;
 
 @end
