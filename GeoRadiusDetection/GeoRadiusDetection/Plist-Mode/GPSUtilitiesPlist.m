@@ -7,6 +7,7 @@
 //
 
 #import "GPSUtilitiesPlist.h"
+#import "GPSLocationData.h"
 
 #define kTitle @"title"
 #define kImage @"image"
@@ -22,8 +23,22 @@
     NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"LocationData" ofType:@"plist"];
     NSMutableArray *locDataArray = [[NSMutableArray alloc] initWithContentsOfFile:plistCatPath];
 
+    NSMutableArray *returnData = [[NSMutableArray alloc] init];
+    
+    for(NSDictionary *tempLocationData in locDataArray){
+        GPSLocationData *locationData = [[GPSLocationData alloc] init];
+        
+        [locationData setTitle:[tempLocationData objectForKey:kTitle]];
+        [locationData setLatitude:[tempLocationData objectForKey:kLat]];
+        [locationData setLongitude:[tempLocationData objectForKey:kLong]];
+        [locationData setRadius:[tempLocationData objectForKey:kRadius]];
+        [locationData setImage:[tempLocationData objectForKey:kImage]];
+        
+        [returnData addObject:locationData];
+    }
+    
    // NSLog(@"Location data %@", locDataArray);
-    return locDataArray;
+    return returnData;
 
 }
 @end

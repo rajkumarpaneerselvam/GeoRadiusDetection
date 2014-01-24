@@ -30,6 +30,13 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy=kCLLocationAccuracyBest;
     self.locationManager.distanceFilter=kCLDistanceFilterNone;
+    
+//    Initialize the Sqlite DB
+    
+    sqliteHelper = [[GPSSqliteHelper alloc] init];
+    [sqliteHelper initialize];
+    [sqliteHelper prepareData:self.geoLocationArray];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,6 +61,9 @@
         self.txtLon.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
         self.txtLat.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
     }
+    
+    NSString *imagePath = [sqliteHelper deriveZoneImage:newLocation];
+    NSLog(@"Image file derived from Sqlite helper %@",imagePath);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -65,8 +75,12 @@
 }
 
 - (IBAction)locatemeAction:(id)sender {
+    CLLocation *loc = [[CLLocation alloc]initWithLatitude:40.135742 longitude:-82.992378];
+    NSString *img = [sqliteHelper deriveZoneImage:loc];
     // kickstart to get user current location
     [self.locationManager setDelegate:self];
     [self.locationManager startUpdatingLocation];
+    
+    
 }
 @end

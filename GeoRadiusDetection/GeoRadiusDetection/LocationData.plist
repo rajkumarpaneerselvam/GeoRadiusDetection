@@ -56,9 +56,9 @@
 		<key>image</key>
 		<string>columbus.png</string>
 		<key>lat</key>
-		<integer>40</integer>
+		<real>39.943436</real>
 		<key>lon</key>
-		<real>83.09999999999999</real>
+		<real>-82.981568</real>
 		<key>radius</key>
 		<integer>10</integer>
 	</dict>
