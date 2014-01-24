@@ -10,4 +10,13 @@
 
 @interface GPSViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+@property (weak, nonatomic) IBOutlet UITextField *txtLat;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtLon;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnSelector;
+
+
+
 @end

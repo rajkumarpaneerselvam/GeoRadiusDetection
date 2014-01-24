@@ -21,6 +21,7 @@
 		4DA85CFD1891C3FD007E64D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA85CDF1891C3FD007E64D0 /* UIKit.framework */; };
 		4DA85D051891C3FD007E64D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DA85D031891C3FD007E64D0 /* InfoPlist.strings */; };
 		4DA85D071891C3FD007E64D0 /* GeoRadiusDetectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA85D061891C3FD007E64D0 /* GeoRadiusDetectionTests.m */; };
+		A3A774371892EBC100F21E87 /* LocationData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3A774361892EBC100F21E87 /* LocationData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4DA85D021891C3FD007E64D0 /* GeoRadiusDetectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoRadiusDetectionTests-Info.plist"; sourceTree = "<group>"; };
 		4DA85D041891C3FD007E64D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4DA85D061891C3FD007E64D0 /* GeoRadiusDetectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoRadiusDetectionTests.m; sourceTree = "<group>"; };
+		A3A774361892EBC100F21E87 /* LocationData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocationData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA85CE31891C3FD007E64D0 /* GeoRadiusDetection-Info.plist */,
+				A3A774361892EBC100F21E87 /* LocationData.plist */,
 				4DA85CE41891C3FD007E64D0 /* InfoPlist.strings */,
 				4DA85CE71891C3FD007E64D0 /* main.m */,
 				4DA85CE91891C3FD007E64D0 /* GeoRadiusDetection-Prefix.pch */,
@@ -232,6 +235,7 @@
 				4DA85CF41891C3FD007E64D0 /* Images.xcassets in Resources */,
 				4DA85CE61891C3FD007E64D0 /* InfoPlist.strings in Resources */,
 				4DA85CEF1891C3FD007E64D0 /* Main.storyboard in Resources */,
+				A3A774371892EBC100F21E87 /* LocationData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +465,7 @@
 				4DA85D0C1891C3FD007E64D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DA85D0D1891C3FD007E64D0 /* Build configuration list for PBXNativeTarget "GeoRadiusDetectionTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +474,7 @@
 				4DA85D0F1891C3FD007E64D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
