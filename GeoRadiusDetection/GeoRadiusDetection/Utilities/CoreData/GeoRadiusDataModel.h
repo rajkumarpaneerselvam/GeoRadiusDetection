@@ -12,10 +12,17 @@
 
 @interface GeoRadiusDataModel : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * radius;
-@property (nonatomic, retain) NSString * latitude;
-@property (nonatomic, retain) NSString * longtitude;
-@property (nonatomic, retain) NSString * image;
+//@property (nonatomic, retain) NSString * title;
+//@property (nonatomic, retain) NSString * radius;
+//@property (nonatomic, retain) NSString * latitude;
+//@property (nonatomic, retain) NSString * longtitude;
+//@property (nonatomic, retain) NSString * image;
+
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSNumber *latitude;
+@property (nonatomic, strong) NSNumber *longitude;
+@property (nonatomic, strong) NSNumber *radius;
+@property (nonatomic, strong) NSString *image;
+
 
 @end

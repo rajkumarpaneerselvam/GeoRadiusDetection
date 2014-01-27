@@ -9,6 +9,8 @@
 #import "GPSCoredataManager.h"
 #import "GeoRadiusDataModel.h"
 #import "GPSUtilitiesPlist.h"
+#import "GeoRadiusDataModel.h"
+#import "GPSLocationData.h"
 
 @implementation GPSCoredataManager
 
@@ -66,31 +68,42 @@
 #pragma mark - Insert Content
 
 - (void)insertContentIntoCoreData {
-    
-//    
-//    GPSUtilitiesPlist *utility = [[GPSUtilitiesPlist alloc] init];
-//    NSMutableArray *dataArr = [utility getLocationData];
-//    
-//    NSManagedObjectContext *context = [self managedObjectContext];
-//    GeoRadiusDataModel *dataObj = [NSEntityDescription   insertNewObjectForEntityForName:@"GeoRadiusDataModel" inManagedObjectContext:context];
-//
-//    dataObj.latitude = @"22.596996";
-//    dataObj.longtitude = @"49.02883";
-//    dataObj.image = @"dallas.png";
-//    dataObj.title = @"Test Chase";
-//    dataObj.radius = @"2.0";
-//    
-//    NSError *error;
-//    if (![context save:&error]) {
-//        NSLog(@"========Error in saving data in data model=============");
-//    }
+
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"isDataAvailable"]) {
+        NSLog(@"Data inserted into core data -------");
+        GPSUtilitiesPlist *utility = [[GPSUtilitiesPlist alloc] init];
+        NSMutableArray *dataArr = [utility getLocationData];
+        NSManagedObjectContext *context = [self managedObjectContext];
+        
+        
+        for (GPSLocationData *tempObj in dataArr) {
+            
+            GeoRadiusDataModel *dataObj = [NSEntityDescription   insertNewObjectForEntityForName:@"GeoRadiusDataModel" inManagedObjectContext:context];
+            
+            dataObj.latitude = tempObj.latitude;
+            dataObj.longitude = tempObj.longitude;
+            dataObj.image = tempObj.image;
+            dataObj.title = tempObj.title;
+            dataObj.radius = tempObj.radius;
+            
+            NSError *error;
+            if (![context save:&error]) {
+                NSLog(@"========Error in saving data in data model=============");
+            }
+        }
+       
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isDataAvailable"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 
 
 #pragma Coredata content
 
-- (void) readContentFromCoreData {
+- (NSMutableArray *) readContentFromCoreData {
+    
+    NSMutableArray *returnArr;
     
     NSManagedObjectContext *context = [self managedObjectContext];
 
@@ -104,13 +117,18 @@
 
     for (GeoRadiusDataModel *obj in fetchedObjects) {
 
-        NSLog(@"Latitude: %@", obj.latitude);
-        NSLog(@"Longtitude: %@", obj.longtitude);
-        NSLog(@"Radius: %@", obj.radius);
-        NSLog(@"Image: %@", obj.image);
-        NSLog(@"Title: %@", obj.title);
+        GPSLocationData *tempObj = [[GPSLocationData alloc] init];
+        tempObj.latitude = obj.latitude;
+        tempObj.longitude = obj.longitude;
+        tempObj.radius = obj.radius;
+        tempObj.image = obj.image;
+        tempObj.title = obj.title;
+        [returnArr addObject:tempObj];
+        
+        NSLog(@"Data read from core data ---------");
     }
     
+    return returnArr;
 }
 
 @end

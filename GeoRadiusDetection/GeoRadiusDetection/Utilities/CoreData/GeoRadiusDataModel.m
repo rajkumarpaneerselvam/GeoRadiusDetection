@@ -14,7 +14,7 @@
 @dynamic title;
 @dynamic radius;
 @dynamic latitude;
-@dynamic longtitude;
+@dynamic longitude;
 @dynamic image;
 
 @end

@@ -36,13 +36,10 @@
     self.locationManager.desiredAccuracy=kCLLocationAccuracyBest;
     self.locationManager.distanceFilter=kCLDistanceFilterNone;
     
-    GPSCoredataManager *mgr = [[GPSCoredataManager alloc] init];
-//    [mgr managedObjectContext];
-    [mgr insertContentIntoCoreData];
-    [mgr readContentFromCoreData];
-
-    //    Initialize the Sqlite DB
     
+
+    
+    //    Initialize the Sqlite DB
     sqliteHelper = [[GPSSqliteHelper alloc] init];
     [sqliteHelper initialize];
     [sqliteHelper prepareData:self.geoLocationArray];
@@ -50,6 +47,14 @@
     appdel = (GPSAppDelegate *)[UIApplication sharedApplication].delegate;
     appdel.mode = @"plist";
     appdel.locationCollection = self.geoLocationArray;
+    
+    
+//    if ([appdel.mode isEqualToString:@"coredata"]) {
+//        GPSCoredataManager *mgr = [[GPSCoredataManager alloc] init];
+//        [mgr insertContentIntoCoreData];
+//        [mgr readContentFromCoreData];
+//
+//    }
 
 }
 
@@ -69,6 +74,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation {
     CLLocation *currentLocation = newLocation;
+    
     
     // update the UI with user current location 
     if (currentLocation != nil) {

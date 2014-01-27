@@ -21,6 +21,5 @@
 
 - (NSManagedObjectContext *) managedObjectContext;
 - (void)insertContentIntoCoreData;
-- (void) readContentFromCoreData;
-
+- (NSMutableArray *) readContentFromCoreData;
 @end
