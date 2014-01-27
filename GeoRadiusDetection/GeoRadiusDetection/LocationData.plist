@@ -6,7 +6,7 @@
 		<key>title</key>
 		<string>Albany, N.M</string>
 		<key>image</key>
-		<string>nm.png</string>
+		<string>Albany.png</string>
 		<key>lat</key>
 		<real>42.654162</real>
 		<key>lon</key>
@@ -18,7 +18,7 @@
 		<key>title</key>
 		<string>Amarillo, Tex.</string>
 		<key>image</key>
-		<string>amarillo.png</string>
+		<string>Amarillo.png</string>
 		<key>lat</key>
 		<real>35.217576</real>
 		<key>lon</key>
@@ -30,7 +30,7 @@
 		<key>title</key>
 		<string>Dallas, Tex.</string>
 		<key>image</key>
-		<string>dallas.png</string>
+		<string>Dallas.png</string>
 		<key>lat</key>
 		<real>32.7688</real>
 		<key>lon</key>

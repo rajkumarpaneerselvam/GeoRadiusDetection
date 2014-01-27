@@ -33,6 +33,11 @@
 		EE7F846E1896269500554BB7 /* GPSUtilitiesPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7F84671896269500554BB7 /* GPSUtilitiesPlist.m */; };
 		EE7F846F1896269500554BB7 /* GPSSqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7F846A1896269500554BB7 /* GPSSqliteHelper.m */; };
 		EE7F8472189626BA00554BB7 /* GPSImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7F8471189626BA00554BB7 /* GPSImageFetcher.m */; };
+		EE7F84771896351C00554BB7 /* Albany.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7F84731896351C00554BB7 /* Albany.png */; };
+		EE7F84781896351C00554BB7 /* Amarillo.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7F84741896351C00554BB7 /* Amarillo.png */; };
+		EE7F84791896351C00554BB7 /* chicago.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7F84751896351C00554BB7 /* chicago.png */; };
+		EE7F847A1896351C00554BB7 /* Dallas.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7F84761896351C00554BB7 /* Dallas.png */; };
+		EE7F847C189635D700554BB7 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7F847B189635D700554BB7 /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		EE7F846A1896269500554BB7 /* GPSSqliteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSSqliteHelper.m; sourceTree = "<group>"; };
 		EE7F8470189626BA00554BB7 /* GPSImageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSImageFetcher.h; sourceTree = "<group>"; };
 		EE7F8471189626BA00554BB7 /* GPSImageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSImageFetcher.m; sourceTree = "<group>"; };
+		EE7F84731896351C00554BB7 /* Albany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Albany.png; sourceTree = "<group>"; };
+		EE7F84741896351C00554BB7 /* Amarillo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amarillo.png; sourceTree = "<group>"; };
+		EE7F84751896351C00554BB7 /* chicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicago.png; sourceTree = "<group>"; };
+		EE7F84761896351C00554BB7 /* Dallas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dallas.png; sourceTree = "<group>"; };
+		EE7F847B189635D700554BB7 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +225,11 @@
 		A3AEADBA1893019A0001AACC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EE7F847B189635D700554BB7 /* default.png */,
+				EE7F84731896351C00554BB7 /* Albany.png */,
+				EE7F84741896351C00554BB7 /* Amarillo.png */,
+				EE7F84751896351C00554BB7 /* chicago.png */,
+				EE7F84761896351C00554BB7 /* Dallas.png */,
 				A3AEADBB1893019A0001AACC /* columbus.png */,
 			);
 			path = images;
@@ -338,9 +353,14 @@
 			files = (
 				4DA85CF41891C3FD007E64D0 /* Images.xcassets in Resources */,
 				A3AEADBC1893019A0001AACC /* columbus.png in Resources */,
+				EE7F84771896351C00554BB7 /* Albany.png in Resources */,
 				4DA85CE61891C3FD007E64D0 /* InfoPlist.strings in Resources */,
+				EE7F84791896351C00554BB7 /* chicago.png in Resources */,
 				4DA85CEF1891C3FD007E64D0 /* Main.storyboard in Resources */,
+				EE7F847A1896351C00554BB7 /* Dallas.png in Resources */,
 				A3A774371892EBC100F21E87 /* LocationData.plist in Resources */,
+				EE7F84781896351C00554BB7 /* Amarillo.png in Resources */,
+				EE7F847C189635D700554BB7 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
