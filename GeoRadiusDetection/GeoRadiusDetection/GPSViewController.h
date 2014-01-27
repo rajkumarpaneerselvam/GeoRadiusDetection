@@ -10,10 +10,12 @@
 #import "GPSUtilitiesPlist.h"
 #import <CoreLocation/CoreLocation.h>
 #import "GPSSqliteHelper.h"
+#import "GPSAppDelegate.h"
 
 
-@interface GPSViewController : UIViewController <CLLocationManagerDelegate> {
+@interface GPSViewController : UIViewController <CLLocationManagerDelegate,UIApplicationDelegate> {
     GPSSqliteHelper *sqliteHelper;
+    GPSAppDelegate *appdel;
 }
 
 @property (strong, nonatomic) GPSUtilitiesPlist *plistUtility;
@@ -36,6 +38,7 @@
 
 
 
-- (IBAction)locatemeAction:(id)sender;
+- (IBAction)fetchLocation:(id)sender;
+- (IBAction)fetcImage:(id)sender;
 
 @end

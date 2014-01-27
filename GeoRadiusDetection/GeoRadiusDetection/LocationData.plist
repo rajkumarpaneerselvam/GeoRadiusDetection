@@ -8,11 +8,11 @@
 		<key>image</key>
 		<string>nm.png</string>
 		<key>lat</key>
-		<real>42.4</real>
+		<real>42.654162</real>
 		<key>lon</key>
-		<real>73.45</real>
+		<real>-73.75917099999999</real>
 		<key>radius</key>
-		<integer>10</integer>
+		<integer>30</integer>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -20,11 +20,11 @@
 		<key>image</key>
 		<string>amarillo.png</string>
 		<key>lat</key>
-		<real>35.11</real>
+		<real>35.217576</real>
 		<key>lon</key>
-		<real>101.5</real>
+		<real>-101.835129</real>
 		<key>radius</key>
-		<integer>10</integer>
+		<integer>50</integer>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -32,11 +32,11 @@
 		<key>image</key>
 		<string>dallas.png</string>
 		<key>lat</key>
-		<real>32.46</real>
+		<real>32.7688</real>
 		<key>lon</key>
-		<real>96.45999999999999</real>
+		<real>-96.795259</real>
 		<key>radius</key>
-		<integer>10</integer>
+		<integer>50</integer>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -44,11 +44,11 @@
 		<key>image</key>
 		<string>chicago.png</string>
 		<key>lat</key>
-		<real>41.5</real>
+		<real>41.869561</real>
 		<key>lon</key>
-		<real>87.37</real>
+		<real>-87.632661</real>
 		<key>radius</key>
-		<integer>10</integer>
+		<integer>20</integer>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -60,7 +60,7 @@
 		<key>lon</key>
 		<real>-82.981568</real>
 		<key>radius</key>
-		<integer>10</integer>
+		<integer>30</integer>
 	</dict>
 </array>
 </plist>

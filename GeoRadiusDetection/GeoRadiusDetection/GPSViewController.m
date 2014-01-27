@@ -9,6 +9,7 @@
 #import "GPSViewController.h"
 #import "GeoRadiusDataModel.h"
 #import "GPSCoredataManager.h"
+#import "GPSImageFetcher.h"
 
 
 @interface GPSViewController ()
@@ -46,6 +47,10 @@
     [sqliteHelper initialize];
     [sqliteHelper prepareData:self.geoLocationArray];
     
+    appdel = (GPSAppDelegate *)[UIApplication sharedApplication].delegate;
+    appdel.mode = @"plist";
+    appdel.locationCollection = self.geoLocationArray;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,9 +75,6 @@
         self.txtLon.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
         self.txtLat.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
     }
-    
-    NSString *imagePath = [sqliteHelper deriveZoneImage:newLocation];
-    NSLog(@"Image file derived from Sqlite helper %@",imagePath);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -83,16 +85,18 @@
     [errorAlert show];
 }
 
-- (IBAction)locatemeAction:(id)sender {
-    CLLocation *loc = [[CLLocation alloc]initWithLatitude:40.135742 longitude:-82.992378];
-    NSString *img = [sqliteHelper deriveZoneImage:loc];
+- (IBAction)fetchLocation:(id)sender {
     // kickstart to get user current location
     [self.locationManager setDelegate:self];
     [self.locationManager startUpdatingLocation];
-    
-    
 }
 
+- (IBAction)fetchImage:(id)sender {
+    NSString *lat = self.txtLat.text;
+    NSString *lon = self.txtLon.text;
+    UIImage *imageFound = [GPSImageFetcher imageForLocation:[[CLLocation alloc] initWithLatitude:[lat doubleValue] longitude:[lon doubleValue]]];
+    [_bgImageView setImage:imageFound];
+}
 
 
 

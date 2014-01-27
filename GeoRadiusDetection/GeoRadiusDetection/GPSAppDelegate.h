@@ -12,5 +12,7 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) NSString *mode;
+@property (nonatomic, retain) NSArray *locationCollection;
 
 @end

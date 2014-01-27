@@ -12,6 +12,9 @@
 
 @implementation GPSAppDelegate
 
+@synthesize mode = _mode;
+@synthesize locationCollection = _locationCollection;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
